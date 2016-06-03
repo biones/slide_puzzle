@@ -8,7 +8,7 @@ def flac(x):
 
 directions=[[1,0],[0,1],[-1,0],[0,-1]]
 
-class Board:
+class Bord:
     def __init__(self,N):
 
         field=np.random.permutation(range(0,N**2))
@@ -85,7 +85,7 @@ def annealingoptimize():
 
     cool_rate=0.999
     _fval=999
-    x=Board(4)
+    x=Bord(4)
     T=1000
 
     while T>0.00001:
