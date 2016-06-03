@@ -6,6 +6,8 @@ def flac(x):
 
     return x*flac(x-1)
 
+directions=[[1,0],[0,1],[-1,0],[0,-1]]
+
 class Board:
     def __init__(self,N):
 
@@ -38,7 +40,7 @@ class Board:
             self.field[x1[0],x1[1]]=x2
 
     def random_slide(self):
-        directions=[[1,0],[0,1],[-1,0],[0,-1]]
+
 
         field=self.field
         while True:
