@@ -78,12 +78,9 @@ class Board:
                 res+=self.dist((i,j),self.nn[field[i][j]])
 
         return res
-        #S=self.N*self.N
-        #return np.sum(np.abs(self.field.reshape(S)-np.arange(S)))
-
 
 def annealingoptimize():
-    print("aaa")
+
     cool_rate=0.999
     _fval=999
     x=Board(4)
@@ -93,7 +90,6 @@ def annealingoptimize():
         print("x=")
         print(x.field)
         print(x.f())
-        #input()
 
         T=T*cool_rate
         x.random_slide()
@@ -115,5 +111,6 @@ def annealingoptimize():
         x.modosu()
 
     return(x)
+
 
 annealingoptimize()
